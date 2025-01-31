@@ -1,0 +1,3 @@
+name: Nike Air Max
+price: 3229.99eu
+size: L, XL

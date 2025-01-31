@@ -1,0 +1,42 @@
+import React from "react";
+import { ShoppingCart } from "lucide-react";
+
+const products = [
+  { id: 1, name: "Penguin Plush", price: 19.99, image: "/penguin-plush.jpg" },
+  { id: 2, name: "Linux Mug", price: 9.99, image: "/linux-mug.jpg" },
+  { id: 3, name: "Tux Sticker Pack", price: 4.99, image: "/tux-stickers.jpg" },
+  { id: 4, name: "Open Source Hoodie", price: 39.99, image: "/opensource-hoodie.jpg" }
+];
+
+export default function ShoppingCartPage({ cart, setCart }) {
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
+
+  return (
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-800 mb-8">🛍️ Shop Our Collection</h1>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {products.map((product) => (
+          <div
+            key={product.id}
+            className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
+          >
+            <img src={product.image} alt={product.name} className="w-full h-56 object-cover" />
+            <div className="p-4">
+              <h2 className="text-xl font-semibold text-gray-800">{product.name}</h2>
+              <p className="text-gray-600 text-lg mb-4">${product.price.toFixed(2)}</p>
+              <button
+                className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300"
+                onClick={() => addToCart(product)}
+              >
+                <ShoppingCart className="inline w-5 h-5 mr-2" /> Add to Cart
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

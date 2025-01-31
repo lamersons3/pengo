@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.bg-split {
+  background: linear-gradient(to right, #facc15 40%, #111 60%);
+}

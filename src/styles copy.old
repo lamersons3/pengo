@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+}
+
+/* Navbar (Same color as Footer) */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Product Grid */
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr; /* Ensures one item per row */
+    justify-items: center;
+  }
+  
+  .card {
+    width: 80%; /* Adjust to control the card size */
+    max-width: 600px; /* Prevents cards from being too wide */
+  }
+  
+
+.card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.btn {
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover {
+    background: gray;
+}
+
+/* Footer (Same color as Navbar) */
+.footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* Countdown Timer */
+.countdown-container {
+    text-align: center;
+    padding: 20px;
+    background: #ff5733;
+    /* Orange-red for urgency */
+    color: white;
+    font-size: 1.5em;
+}
+
+.countdown {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.gallery-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    white-space: nowrap;
+    scrollbar-width: thin;
+  }

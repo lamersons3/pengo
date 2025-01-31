@@ -1,0 +1,4 @@
+name: Nike Air Max
+price: 3229.99eu
+size: L, XL
+Desc: Comfortable, durable and timeless, this is the number 1 for a reason. The classic '80s construction with striking details ensures a style that follows you, whether you're on the field or on the go.
